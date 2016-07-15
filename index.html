@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html ng-app="Sticky-notes">
+<html ng-app="sticky-Notes">
   <head>
     <meta charset="utf-8">
+    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="base.css" media="screen" title="no title" charset="utf-8">
     <title>Sticky Notes</title>
   </head>
   <body ng-controller="mainCtrl">
 
+    <input type="text" ng-model="note.title"placeholder="Title">
+    <input type="text" ng-model="note.content"placeholder="Add Note Here">
+    <button ng-click="saveNote(note)">Add Note</button>
+
+    <ul>
+      <li ng-repeat="note in notes">
+        <a href="#">
+          <h2>{{ note.title }}</h2> <!--Not to be confused with the note.title above-->
+          <p>{{ note.content }}</p> <!--Not to be confused with the note.content above-->
+        </a>
+      </li>
+    </ul>
 
 
 
