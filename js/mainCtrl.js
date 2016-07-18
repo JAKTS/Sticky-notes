@@ -5,7 +5,7 @@ function mainCtrl($scope,service){
 
 $scope.saveNote = function(note){
   $scope.note = {};
-    note.service.addNote(note);
+    service.addNote(note);
     getNotes();
 };
 
